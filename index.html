@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nourrish AI Studio</title>
+<style>
+body{margin:0;background:#fff8f1;color:#342a27;font-family:Arial,sans-serif;padding:20px}
+main{max-width:650px;margin:auto}
+h1{color:#a45a42}
+textarea,input,button{box-sizing:border-box;width:100%;padding:14px;margin:8px 0;border-radius:12px;font-size:16px}
+textarea,input{border:1px solid #d8b9a9}
+button{background:#a45a42;color:white;border:0;font-weight:bold}
+.card{background:white;padding:15px;margin:14px 0;border-radius:15px;box-shadow:0 2px 9px #ddd}
+img{width:100%;border-radius:12px}
+small{color:#666}
+</style>
+</head>
+<body>
+<main>
+<h1>🌸 Nourrish AI Studio</h1>
+<p>Your Personal Reel Creator</p>
+<p>Certified Nutritionist | Disease Reversal Coach | Runner</p>
+<h3>🎬 What reel do you want to create?</h3>
+<textarea id="topic" rows="4" placeholder="Example: 5 healthy Indian breakfast ideas for women over 35"></textarea>
+<button onclick="create()">✨ Create My Reel Scenes</button>
+<div id="output"></div>
+</main>
+<script>
+function create(){
+const topic=document.getElementById("topic").value.trim();
+if(!topic){alert("Please enter your reel topic");return}
+const parts=[
+"Hook: "+topic,
+"Why this topic matters",
+"Practical tip number one",
+"Practical tip number two",
+"Follow Nourrish with Ruhhi for more"
+];
+const out=document.getElementById("output");
+out.innerHTML="";
+parts.forEach((p,i)=>{
+const card=document.createElement("div");
+card.className="card";
+const title=document.createElement("h3");
+title.textContent="Scene "+(i+1);
+const text=document.createElement("p");
+text.textContent=p;
+const link=document.createElement("a");
+link.target="_blank";
+link.rel="noopener noreferrer";
+link.href="https://commons.wikimedia.org/w/index.php?search="+encodeURIComponent(topic+" "+p)+"&title=Special:MediaSearch&type=image";
+link.textContent="🖼️ Find matching pictures";
+card.append(title,text,link);
+out.appendChild(card);
+});
+}
+</script>
+</body>
+</html>
+
+Step 2 — GitHub में Paste कीजिए
+
+* ऊपर code के Copy option से पूरा code copy कीजिए।
+* GitHub में Enter file contents here पर tap कीजिए।
+* वहाँ long press करके Paste कीजिए।
+* ऊपर हरे Commit changes… button पर tap कीजिए।
+* अगले popup में फिर Commit changes दबाइए।
+
+Step 3 — मुझे Screenshot भेजिए
+
+जब index.html आपकी repository में दिखाई देने लगे, तो screenshot भेज दीजिए।
+
+फिर हम GitHub Pages चालू करेंगे और आपकी app का live website link बनाएँगे।
+
